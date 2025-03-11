@@ -68,6 +68,6 @@ a:hover {
 
 @media screen and (max-width: 480px) {
     .logo {
-        width: 30px; /* Logo ancora più piccolo su smartphone */
+        width: 60px; /* Logo ancora più piccolo su smartphone */
     }
 }
