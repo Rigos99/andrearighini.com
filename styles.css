@@ -60,7 +60,14 @@ a:hover {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 10vw;
+    width: 50px;
     height: auto;
     z-index: 1000;
+}
+/* Media Query per schermi molto piccoli (smartphone) */
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 30px; /* Logo ancora più piccolo su smartphone */
+    }
 }
