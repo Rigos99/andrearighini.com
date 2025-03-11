@@ -57,7 +57,7 @@ a:hover {
 /* Stile per il logo fisso */
 
 .logo {
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 10px;
     max-width: 15vw;
