@@ -72,3 +72,22 @@ a:hover {
         height: 70px; 
     }
 }
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centra l'icona */
+    margin-top: 10px; /* Distanza dal copyright */
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 32px; /* Dimensione icona */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Effetto hover */
+}
