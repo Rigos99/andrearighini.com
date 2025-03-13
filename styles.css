@@ -79,8 +79,9 @@ footer {
     .social-icons a {
         display: inline-block;
     }
-    
-    .social-icon {
+
+    .social-icons {
+        filter: invert(1);
         width: 18px; /* Grandezza icona */
         height: auto;
     }
