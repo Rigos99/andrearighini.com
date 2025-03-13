@@ -82,7 +82,7 @@ footer {
 
     .social-icons {
         filter: invert(1);
-        width: 18px; /* Grandezza icona */
+        width: 1px; /* Grandezza icona */
         height: auto;
     }
     
@@ -103,19 +103,20 @@ footer {
     footer a:hover {
         text-decoration: underline; /* Aggiunge sottolineatura al passaggio del mouse */
     }
-/* Disposizione delle colonne Contatti e Link rapidi */
-.row {
-    display: flex;
-    justify-content: space-between;
-    gap: 3px; /* Spaziatura*/
-}
-.column-footer {
-    flex: 1; /* Ogni colonna prende la stessa larghezza */
-}
 
-/* Per mobile, mettiamo le colonne una sotto l'altra */
-@media (max-width: 768px) {
+    /* Disposizione delle colonne Contatti e Link rapidi */
     .row {
-        flex-direction: column; /* in colonna su mobile */
+        display: flex;
+        justify-content: space-between;
+        gap: 3px; /* Spaziatura*/
     }
-}
+    .column-footer {
+        flex: 1; /* Ogni colonna prende la stessa larghezza */
+    }
+    
+    /* Per mobile, mettiamo le colonne una sotto l'altra */
+    @media (max-width: 768px) {
+        .row {
+            flex-direction: column; /* in colonna su mobile */
+        }
+    }
