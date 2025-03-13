@@ -109,9 +109,6 @@ footer {
     gap: 10px; /* Spaziatura*/
 }
 
-.column-footer {
-    flex: 1; /* Ogni colonna prende la stessa larghezza */
-}
 
 /* Per mobile, mettiamo le colonne una sotto l'altra */
 @media (max-width: 768px) {
