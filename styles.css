@@ -46,6 +46,12 @@ footer {
     color: #fff;
 }
 
+.footer-logo {
+    width: 50px;  
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
 .social-icons {
     margin-top: 8px; /* Distanza dal copyright */
 }
