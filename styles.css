@@ -55,9 +55,8 @@ footer {
 }
 
 .social-icon {
-    width: 30px; /* Grandezza icona */
+    width: 20px; /* Grandezza icona */
     height: auto;
-    filter: invert(1); /* Rende l'icona bianca su sfondo scuro */
 }
 
 a {
