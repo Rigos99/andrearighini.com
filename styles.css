@@ -81,10 +81,9 @@ footer {
     }
 
     .social-icons {
-        width: 20px;  
-        height: auto; 
-        display: block; 
-        margin: 0 auto;
+         filter: invert(1);
+        width: 1px; /* Grandezza icona */
+        height: auto;
     }
     
     a {
