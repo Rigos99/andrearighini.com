@@ -106,7 +106,7 @@ footer {
 .row {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Spaziatura*/
+    gap: 3px; /* Spaziatura*/
 }
 .column-footer {
     flex: 1; /* Ogni colonna prende la stessa larghezza */
