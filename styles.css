@@ -43,7 +43,7 @@
     display: none;
 } 
 
-/* NavBar per il mobile */
+/* Burger icon per il mobile */
 
 .menu-toggle {
     display: none;
@@ -58,7 +58,7 @@
     color: #fff;
     width: 30px;
     height: 4px;
-    background-color: black;
+    background-color: white;
     position: relative;
 }
 
@@ -83,9 +83,10 @@
         width: 100%;
         text-align: left;
         border-top: 1px solid white;
+        color: white;
     }
 
-    /* Mostra il cerchio (anello) su mobile */
+    /* Mostra il burger bar su mobile */
     
     .menu-toggle {
         display: block;
