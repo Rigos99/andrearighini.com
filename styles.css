@@ -95,11 +95,8 @@
 
     /* Quando il checkbox è selezionato, mostra il menu */
     
-    .menu-toggle-checkbox:checked + .menu-toggle + .navbar{
-        display: flex;
-    }
-    .menu-toggle-checkbox:checked ~ .logo {
-        display: none;
+    .menu-toggle-checkbox:checked ~ .navbar ~ .logo {
+    display: none;
     }
 }
 
