@@ -43,7 +43,7 @@
     display: none;
 } 
 
-/* Cerchio (anello) per il mobile */
+/* NavBar per il mobile */
 
 .menu-toggle {
     display: none;
@@ -55,9 +55,10 @@
 }
 
 .bar {
+    color: #fff;
     width: 30px;
     height: 4px;
-    background-color: transparent;
+    background-color: black;
     position: relative;
 }
 
@@ -71,7 +72,7 @@
         right: 0px;
         flex-direction: column;
         gap: 10px;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: black;
         width: 100%;
         padding: 20px;
         border-top: 2px solid white;
