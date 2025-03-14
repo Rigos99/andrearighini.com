@@ -22,7 +22,7 @@
         height: 70px; 
     }
 }
-/* Stile per la navbar in alto a destra */
+/* Stile per la navbar */
 
 .navbar {
     position: absolute;
@@ -41,12 +41,17 @@
 /* Nascondi il checkbox di default */
 .menu-toggle-checkbox {
     display: none;
-}  
+} 
+
 /* Cerchio (anello) per il mobile */
+
 .menu-toggle {
     display: none;
     cursor: pointer;
     padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .circle {
@@ -64,8 +69,8 @@
     .navbar {
         display: none; /* Menu nascosto */
         position: absolute;
-        top: 60px;  /* Impostare una distanza dal top */
-        right: 20px;
+        top: 0px;  /* Impostare una distanza dal top */
+        right: 0px;
         flex-direction: column;
         gap: 10px;
         background-color: black;
@@ -80,11 +85,13 @@
     }
 
     /* Mostra il cerchio (anello) su mobile */
+    
     .menu-toggle {
         display: block;
     }
 
     /* Quando il checkbox è selezionato, mostra il menu */
+    
     .menu-toggle-checkbox:checked + .menu-toggle + .navbar {
         display: flex;
     }
