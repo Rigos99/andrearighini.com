@@ -97,6 +97,7 @@
     
     .menu-toggle-checkbox:checked + .menu-toggle + .navbar {
         display: flex;
+        background-color: black;
     }
 }
 
