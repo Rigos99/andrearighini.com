@@ -31,7 +31,6 @@
     display: flex;
     gap: 15px;
 }
-
 .navbar a {
     color: #fff;
     text-decoration: none;
@@ -39,6 +38,72 @@
     padding: 8px 12px;
     font-weight: bold;
 }
+/* Nascondi il checkbox di default */
+.menu-toggle-checkbox {
+    display: none;
+}  
+/* Cerchio (anello) per il mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+}
+
+/* Media query per mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Nascondi il menu su mobile di default */
+    .navbar {
+        display: none; /* Menu nascosto */
+        position: absolute;
+        top: 60px;  /* Impostare una distanza dal top */
+        right: 20px;
+        flex-direction: column;
+        gap: 10px;
+        background-color: black;
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 12px 0;
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid white;
+    }
+
+    /* Mostra il cerchio (anello) su mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Quando il checkbox è selezionato, mostra il menu */
+    .menu-toggle-checkbox:checked + .menu-toggle + .navbar {
+        display: flex;
+    }
+}
+
+/* Su desktop il menu è sempre visibile */
+@media (min-width: 769px) {
+    .navbar {
+        display: flex; /* Menu visibile */
+        gap: 15px;
+        flex-direction: row;
+    }
+
+    .menu-toggle,
+    .menu-toggle-checkbox {
+        display: none;  /* Nascondi il cerchio e il checkbox su desktop */
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
