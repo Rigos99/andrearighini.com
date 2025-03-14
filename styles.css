@@ -86,8 +86,6 @@
         border-top: 1px solid white;
         color: white;
     }
-
-    /* Mostra il burger bar su mobile */
     
     .menu-toggle {
         display: block;
@@ -96,23 +94,23 @@
     /* Quando il checkbox è selezionato, mostra il menu */
     
     .menu-toggle-checkbox:checked + .menu-toggle + .navbar { 
-    display: none;
+    display: flex;
     }
-}
-
-/* Su desktop il menu è sempre visibile */
-@media (min-width: 769px) {
-    .navbar {
-        display: flex; /* Menu visibile */
-        gap: 15px;
-        flex-direction: row;
     }
-
-    .menu-toggle,
-    .menu-toggle-checkbox {
-        display: none;  /* Nascondi il cerchio e il checkbox su desktop */
+    
+    /* Su desktop il menu è sempre visibile */
+    @media (min-width: 769px) {
+        .navbar {
+            display: flex; /* Menu visibile */
+            gap: 15px;
+            flex-direction: row;
+        }
+    
+        .menu-toggle,
+        .menu-toggle-checkbox {
+            display: none; 
+        }
     }
-}
 
 body {
     font-family: Arial, sans-serif;
