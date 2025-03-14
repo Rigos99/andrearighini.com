@@ -54,11 +54,9 @@
     right: 20px;
 }
 
-.circle {
+.bar {
     width: 30px;
-    height: 30px;
-    border: 2px solid white;
-    border-radius: 50%;
+    height: 4px;
     background-color: transparent;
     position: relative;
 }
@@ -73,8 +71,10 @@
         right: 0px;
         flex-direction: column;
         gap: 10px;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.8);
         width: 100%;
+        padding: 20px;
+        border-top: 2px solid white;
     }
 
     .navbar a {
