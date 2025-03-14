@@ -95,9 +95,8 @@
 
     /* Quando il checkbox è selezionato, mostra il menu */
     
-    .menu-toggle-checkbox:checked + .menu-toggle + .navbar {
+    .menu-toggle-checkbox:checked + .menu-toggle + .navbar .logo {
         display: flex;
-        background-color: black;
     }
 }
 
