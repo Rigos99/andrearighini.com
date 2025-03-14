@@ -60,6 +60,7 @@
     height: 4px;
     background-color: white;
     position: relative;
+    margin: 5px 0; 
 }
 
 /* Media query per mobile (max-width: 768px) */
