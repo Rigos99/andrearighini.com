@@ -56,11 +56,11 @@
 
 .bar {
     color: #fff;
-    width: 30px;
+    width: 25px;
     height: 4px;
     background-color: white;
     position: relative;
-    margin: 5px 0; 
+    margin: 4px 0; 
 }
 
 /* Media query per mobile (max-width: 768px) */
@@ -75,7 +75,7 @@
         gap: 10px;
         background-color: black;
         width: 100%;
-        padding: 20px;
+        padding: 15px;
         border-top: 2px solid white;
     }
 
