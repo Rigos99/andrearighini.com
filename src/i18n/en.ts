@@ -8,8 +8,8 @@ export const en = {
   },
   nav: {
     about: 'About',
-    work: 'Experience',
-    education: 'Education',
+    work: 'Work',
+    education: 'Studies',
     contact: 'Contact',
   },
   hero: {
