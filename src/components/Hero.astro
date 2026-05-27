@@ -44,6 +44,8 @@ const highlightClass =
           src="/freelance.jpg"
           alt=""
           aria-hidden="true"
+          fetchpriority="high"
+          decoding="async"
           class="relative -top-1 inline-block h-14 w-auto sm:h-12"
         />
       </h1>
@@ -62,6 +64,8 @@ const highlightClass =
           <img
             src="/me.jpg"
             alt={t.hero.photoAlt}
+            fetchpriority="high"
+            decoding="async"
             class="absolute inset-0 h-full w-full object-cover"
             onerror="this.style.display='none'"
           />
