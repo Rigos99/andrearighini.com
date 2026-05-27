@@ -1,0 +1,20 @@
+---
+import type { Translation } from '../i18n';
+
+interface Props {
+  t: Translation;
+}
+
+const { t } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer
+  class="mt-20 flex flex-col items-start justify-between gap-2 border-t border-[var(--color-line)] pt-6 text-xs text-[var(--color-muted)] sm:flex-row sm:items-center"
+>
+  <span>© {year} {t.footer.copy}</span>
+  <span class="inline-flex items-center gap-1.5">
+    <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]"></span>
+    {t.footer.note}
+  </span>
+</footer>

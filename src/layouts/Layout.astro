@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+import type { Translation } from '../i18n';
+
+interface Props {
+  t: Translation;
+  lang: 'it' | 'en';
+}
+
+const { t, lang } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    <link rel="alternate" hreflang="it" href="https://andrearighini.com/" />
+    <link rel="alternate" hreflang="en" href="https://andrearighini.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://andrearighini.com/" />
+  </head>
+  <body class="bg-[var(--color-soft)] text-[var(--color-ink)]">
+    <div class="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-16">
+      <slot />
+    </div>
+  </body>
+</html>
