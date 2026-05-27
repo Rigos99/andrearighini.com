@@ -15,6 +15,10 @@ const highlight = t.hero.taglineHighlight;
 const hlIdx = tagline.indexOf(highlight);
 const taglineBefore = hlIdx >= 0 ? tagline.slice(0, hlIdx) : tagline;
 const taglineAfter = hlIdx >= 0 ? tagline.slice(hlIdx + highlight.length) : '';
+const highlightClass =
+  t.meta.langCode === 'en'
+    ? 'font-bold'
+    : 'font-semibold underline decoration-[var(--color-ink)] decoration-[3px] underline-offset-4';
 ---
 
 <section class="relative mb-16 overflow-hidden rounded-3xl border border-[var(--color-line)] bg-white p-6 shadow-sm sm:p-10">
@@ -65,10 +69,7 @@ const taglineAfter = hlIdx >= 0 ? tagline.slice(hlIdx + highlight.length) : '';
       </div>
 
       <p class="mb-4 text-xl font-medium leading-snug text-[var(--color-ink)] sm:text-2xl">
-        {taglineBefore}<span
-          class="font-semibold underline decoration-[var(--color-ink)] decoration-[3px] underline-offset-4"
-          >{highlight}</span
-        >{taglineAfter}
+        {taglineBefore}<span class={highlightClass}>{highlight}</span>{taglineAfter}
       </p>
       <p class="mb-6 max-w-prose text-base leading-relaxed text-[var(--color-muted)]">
         {t.hero.intro}
