@@ -66,7 +66,7 @@ export const en = {
       {
         slug: 'loqui',
         org: 'Loqui',
-        role: 'Performance Marketing Analyst',
+        role: 'Performance Marketing',
         period: 'Sep 23 - Mar 24',
         description:
           'Led performance marketing initiatives during evenings, alongside my consulting role at SCS.',
