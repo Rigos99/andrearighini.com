@@ -15,7 +15,7 @@ type TextLogo = {
 };
 
 const logos: Record<string, ImageLogo | TextLogo> = {
-  freelance: { kind: 'image', src: '/freelance.jpg' },
+  freelance: { kind: 'image', src: '/Logo_mio.svg' },
   serenis: { kind: 'image', src: '/serenis.jpg' },
   loqui: { kind: 'image', src: '/loqui.jpg' },
   'unibo-master': { kind: 'image', src: '/unibo.jpg' },
@@ -47,7 +47,7 @@ const logo = logos[slug] ?? fallback;
       width="48"
       height="48"
       loading="lazy"
-      class="h-12 w-12 shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-black/5"
+      class="h-12 w-12 shrink-0 rounded-xl bg-white object-contain p-1 shadow-sm ring-1 ring-black/5"
     />
   ) : (
     <div
