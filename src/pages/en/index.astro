@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Hero from '../../components/Hero.astro';
+import Marquee from '../../components/Marquee.astro';
 import About from '../../components/About.astro';
 import Experience from '../../components/Experience.astro';
 import Education from '../../components/Education.astro';
@@ -16,6 +17,7 @@ const t = translations.en;
 <Layout t={t} lang="en">
   <Nav t={t} currentLang="en" />
   <Hero t={t} />
+  <Marquee t={t} />
   <About t={t} />
   <Experience t={t} />
   <Education t={t} />

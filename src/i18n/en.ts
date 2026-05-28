@@ -24,6 +24,16 @@ export const en = {
     photoAlt: 'Andrea Righini photo',
     clientsLabel: 'Recent clients',
   },
+  marquee: {
+    label: 'I work / have worked with',
+    items: [
+      'Pollo&Friends',
+      'Italian Exhibition Group',
+      'Serenis',
+      'Loqui',
+      'SCS Consulting',
+    ],
+  },
   about: {
     title: 'About',
     items: [

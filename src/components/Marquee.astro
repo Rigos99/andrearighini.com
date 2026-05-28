@@ -1,0 +1,48 @@
+---
+import type { Translation } from '../i18n';
+
+interface Props {
+  t: Translation;
+}
+
+const { t } = Astro.props;
+// duplicate the list so the loop is seamless
+const loopItems = [...t.marquee.items, ...t.marquee.items];
+---
+
+<section
+  class="relative mb-12 w-screen overflow-hidden border-y border-[var(--color-line)] bg-white py-4"
+  style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;"
+  aria-label={t.marquee.label}
+>
+  <!-- soft fade on the edges so names dissolve in/out -->
+  <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent"></div>
+  <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent"></div>
+
+  <div class="marquee-track flex items-center gap-8 whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-[var(--color-muted)] uppercase">
+    {
+      loopItems.map((name) => (
+        <>
+          <span>{name}</span>
+          <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]" aria-hidden="true" />
+        </>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .marquee-track {
+    width: max-content;
+    animation: marquee-scroll 35s linear infinite;
+  }
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+</style>
