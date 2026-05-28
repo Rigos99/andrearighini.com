@@ -104,5 +104,6 @@ export const it = {
   footer: {
     copy: 'Andrea Righini',
     note: 'Fatto smanettando con AI',
+    backToTop: 'Torna su',
   },
 } as const;
