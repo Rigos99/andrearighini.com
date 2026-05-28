@@ -18,8 +18,8 @@ const { t } = Astro.props;
         <li class="flex items-center gap-4 rounded-2xl border border-dashed border-[var(--color-line)] bg-white px-4 py-3.5 shadow-sm transition duration-300 ease-out hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:shadow-md sm:px-5">
           <LogoBadge slug={item.slug} />
           <div class="min-w-0 flex-1">
-            <p class="truncate font-semibold text-[var(--color-ink)]">{item.org}</p>
-            <p class="truncate text-sm text-[var(--color-muted)]">{item.role}</p>
+            <p class="font-semibold text-[var(--color-ink)]">{item.org}</p>
+            <p class="text-sm text-[var(--color-muted)]">{item.role}</p>
           </div>
           <span class="shrink-0 text-xs text-[var(--color-muted)] tabular-nums sm:text-sm">
             {item.period}

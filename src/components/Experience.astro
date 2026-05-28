@@ -28,8 +28,8 @@ const { t } = Astro.props;
                 <summary class={`${cardBase} ${cardInteractive}`}>
                   <LogoBadge slug={item.slug} />
                   <div class="min-w-0 flex-1">
-                    <p class="truncate font-semibold text-[var(--color-ink)]">{item.org}</p>
-                    <p class="truncate text-sm text-[var(--color-muted)]">{item.role}</p>
+                    <p class="font-semibold text-[var(--color-ink)]">{item.org}</p>
+                    <p class="text-sm text-[var(--color-muted)]">{item.role}</p>
                   </div>
                   <span class="shrink-0 text-xs text-[var(--color-muted)] tabular-nums sm:text-sm">
                     {item.period}
