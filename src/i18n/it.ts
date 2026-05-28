@@ -42,7 +42,7 @@ export const it = {
       { icon: '🌍', text: '6 mesi di Erasmus in Spagna' },
       { icon: '💼', text: 'Freelance dal 2024 per SaaS e PMI italiane' },
       { icon: '🚀', text: "Mi gasa l'ecosistema startup italiano" },
-      { icon: '🏐', text: 'Nel tempo libero: beach volley, basket e youtube' },
+      { icon: '🏐', text: 'Nel tempo libero: beach volley e basket' },
     ],
   },
   work: {

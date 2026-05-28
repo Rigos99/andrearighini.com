@@ -42,7 +42,7 @@ export const en = {
       { icon: '🌍', text: 'Six months of Erasmus in Spain' },
       { icon: '💼', text: 'Freelance since 2024 for Italian SaaS and SMBs' },
       { icon: '🚀', text: 'Hyped by the Italian startup ecosystem' },
-      { icon: '🏐', text: 'Off work: beach volley, basketball and youtube' },
+      { icon: '🏐', text: 'Off work: beach volley and basketball' },
     ],
   },
   work: {
