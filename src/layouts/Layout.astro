@@ -8,6 +8,63 @@ interface Props {
 }
 
 const { t, lang } = Astro.props;
+
+const canonicalUrl = `https://andrearighini.com${lang === 'en' ? '/en/' : '/'}`;
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Andrea Righini',
+  jobTitle: 'Growth Marketer',
+  description: t.meta.description,
+  url: 'https://andrearighini.com',
+  image: 'https://andrearighini.com/me.jpg',
+  email: 'mailto:andrea.righinix@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Rimini',
+    addressRegion: 'Emilia-Romagna',
+    addressCountry: 'IT',
+  },
+  nationality: {
+    '@type': 'Country',
+    name: 'Italy',
+  },
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Università di Bologna',
+      sameAs: 'https://www.unibo.it/',
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'UCAM Universidad Católica de Murcia',
+      sameAs: 'https://www.ucam.edu/',
+    },
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Freelance',
+  },
+  knowsAbout: [
+    'Growth Marketing',
+    'Performance Marketing',
+    'Paid Advertising',
+    'Meta Ads',
+    'Google Ads',
+    'SEO',
+    'Digital Marketing',
+    'Marketing Analytics',
+    'Google Analytics 4',
+    'Looker Studio',
+    'SaaS Marketing',
+    'B2B Marketing',
+  ],
+  knowsLanguage: ['Italian', 'English', 'Spanish'],
+  sameAs: [
+    'https://www.linkedin.com/in/andrerighini',
+  ],
+};
 ---
 
 <!doctype html>
@@ -30,11 +87,13 @@ const { t, lang } = Astro.props;
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang="it" href="https://andrearighini.com/" />
     <link rel="alternate" hreflang="en" href="https://andrearighini.com/en/" />
     <link rel="alternate" hreflang="x-default" href="https://andrearighini.com/" />
     <link rel="preload" as="image" href="/me.jpg" fetchpriority="high" />
     <link rel="preload" as="image" href="/freelance.jpg" fetchpriority="high" />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   </head>
   <body class="bg-[var(--color-soft)] text-[var(--color-ink)]">
     <div id="top" class="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-16">
