@@ -8,40 +8,45 @@ interface Props {
 
 const { t } = Astro.props;
 
-type IconDef = { color: string; viewBox?: string; paths: string; fill?: 'solid' | 'stroke' };
+type IconDef =
+  | { kind: 'svg'; color: string; viewBox?: string; paths: string; fill?: 'solid' | 'stroke' }
+  | { kind: 'image'; src: string };
 
 const icons: Record<string, IconDef> = {
   'Meta Ads': {
+    kind: 'svg',
     color: '#0866FF',
     fill: 'solid',
     paths:
       '<path d="M9 22V12.5H6v-4h3V6.2C9 3.8 10.4 2.3 13 2.3c1 0 2 .1 2.5.2v3H14c-1 0-1.5.6-1.5 1.5v1.5h3l-.5 4H12.5V22z"/>',
   },
   'Google Ads': {
-    color: '#4285F4',
-    fill: 'solid',
-    paths:
-      '<rect x="9.75" y="3" width="4.5" height="20" rx="2.25" fill="#4285F4" transform="rotate(-20 12 3)"/><rect x="10" y="3" width="4" height="14" rx="2" fill="#FBBC04" transform="rotate(20 12 3)"/><circle cx="6.5" cy="17.5" r="3.2" fill="#34A853"/>',
+    kind: 'image',
+    src: '/google-ads.svg',
   },
   'GA4': {
+    kind: 'svg',
     color: '#F9AB00',
     fill: 'solid',
     paths:
       '<rect x="3" y="14" width="4" height="7" rx="1"/><rect x="10" y="9" width="4" height="12" rx="1" fill="#E37400"/><rect x="17" y="3" width="4" height="18" rx="2" fill="#F9AB00"/>',
   },
   'Notion': {
+    kind: 'svg',
     color: '#0a0a0a',
     fill: 'solid',
     paths:
       '<path d="M4.5 4.5h4l8 10v-10h3v15h-4l-8-10v10h-3z"/>',
   },
   'CRM': {
+    kind: 'svg',
     color: '#475569',
     fill: 'stroke',
     paths:
       '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
   },
   'Looker Studio': {
+    kind: 'svg',
     color: '#4285F4',
     fill: 'stroke',
     paths: '<path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-5"/>',
@@ -57,7 +62,16 @@ const icons: Record<string, IconDef> = {
         const icon = icons[item];
         return (
           <li class="inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-white px-3.5 py-1.5 text-sm font-medium text-[var(--color-ink)] shadow-sm transition duration-300 ease-out hover:-translate-y-0.5 hover:border-[var(--color-accent)]">
-            {icon ? (
+            {icon?.kind === 'image' ? (
+              <img
+                src={icon.src}
+                alt=""
+                aria-hidden="true"
+                width="16"
+                height="16"
+                class="h-4 w-4 object-contain"
+              />
+            ) : icon?.kind === 'svg' ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
