@@ -16,7 +16,9 @@ const loopItems = [...t.marquee.items, ...t.marquee.items];
   </p>
 
   <div
-    class="relative overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white py-4 shadow-sm"
+    class="relative overflow-hidden border-y border-[var(--color-line)] bg-white py-4
+           w-[100vw] left-[50%] right-[50%] -ml-[50vw] -mr-[50vw]
+           sm:w-auto sm:left-0 sm:right-0 sm:ml-0 sm:mr-0 sm:rounded-2xl sm:border-x sm:shadow-sm"
   >
     <!-- soft fade on the edges so names dissolve in/out -->
     <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent"></div>
