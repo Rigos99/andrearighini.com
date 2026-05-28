@@ -94,6 +94,10 @@ export const en = {
       },
     ],
   },
+  tools: {
+    title: 'Tools',
+    items: ['Meta Ads', 'Google Ads', 'GA4', 'Notion', 'CRM', 'Looker Studio'],
+  },
   contact: {
     title: "Let's talk",
     blurb: 'Drop me an email or message me on linkedin :)',

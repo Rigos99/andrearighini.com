@@ -94,6 +94,10 @@ export const it = {
       },
     ],
   },
+  tools: {
+    title: 'Strumenti',
+    items: ['Meta Ads', 'Google Ads', 'GA4', 'Notion', 'CRM', 'Looker Studio'],
+  },
   contact: {
     title: 'Parliamone',
     blurb: 'Mandami una mail o scrivimi un messaggio su linkedin :)',
