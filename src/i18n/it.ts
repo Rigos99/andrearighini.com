@@ -25,7 +25,7 @@ export const it = {
     clientsLabel: 'Clienti recenti',
   },
   marquee: {
-    label: 'Lavoro / ho lavorato con',
+    label: 'Aziende con cui ho lavorato',
     items: [
       'Pollo&Friends',
       'Italian Exhibition Group',

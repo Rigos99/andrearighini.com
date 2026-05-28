@@ -11,10 +11,13 @@ const loopItems = [...t.marquee.items, ...t.marquee.items];
 ---
 
 <section
-  class="relative mb-12 w-screen overflow-hidden border-y border-[var(--color-line)] bg-white py-4"
+  class="relative mb-12 w-screen overflow-hidden border-y border-[var(--color-line)] bg-white py-5"
   style="left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;"
   aria-label={t.marquee.label}
 >
+  <p class="mb-3 text-center text-[10px] font-semibold tracking-[0.2em] text-[var(--color-muted)] uppercase">
+    {t.marquee.label}
+  </p>
   <!-- soft fade on the edges so names dissolve in/out -->
   <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent"></div>
   <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent"></div>

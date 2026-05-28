@@ -25,7 +25,7 @@ export const en = {
     clientsLabel: 'Recent clients',
   },
   marquee: {
-    label: 'I work / have worked with',
+    label: 'Companies I have worked with',
     items: [
       'Pollo&Friends',
       'Italian Exhibition Group',
