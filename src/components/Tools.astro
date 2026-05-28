@@ -7,18 +7,77 @@ interface Props {
 }
 
 const { t } = Astro.props;
+
+type IconDef = { color: string; viewBox?: string; paths: string; fill?: 'solid' | 'stroke' };
+
+const icons: Record<string, IconDef> = {
+  'Meta Ads': {
+    color: '#0866FF',
+    fill: 'solid',
+    paths:
+      '<path d="M9 22V12.5H6v-4h3V6.2C9 3.8 10.4 2.3 13 2.3c1 0 2 .1 2.5.2v3H14c-1 0-1.5.6-1.5 1.5v1.5h3l-.5 4H12.5V22z"/>',
+  },
+  'Google Ads': {
+    color: '#4285F4',
+    fill: 'solid',
+    paths:
+      '<path d="M8.05 1.34a2.25 2.25 0 0 1 3.07.82l8.5 14.72a2.25 2.25 0 0 1-3.9 2.24L7.24 4.4a2.25 2.25 0 0 1 .82-3.07Z"/><path d="M4.4 11.85a4.5 4.5 0 1 1 7.79 4.5 4.5 4.5 0 0 1-7.79-4.5Z" fill="#FBBC04"/>',
+  },
+  'GA4': {
+    color: '#F9AB00',
+    fill: 'solid',
+    paths:
+      '<rect x="3" y="14" width="4" height="7" rx="1"/><rect x="10" y="9" width="4" height="12" rx="1" fill="#E37400"/><rect x="17" y="3" width="4" height="18" rx="2" fill="#F9AB00"/>',
+  },
+  'Notion': {
+    color: '#0a0a0a',
+    fill: 'solid',
+    paths:
+      '<path d="M4.5 4.5h4l8 10v-10h3v15h-4l-8-10v10h-3z"/>',
+  },
+  'CRM': {
+    color: '#475569',
+    fill: 'stroke',
+    paths:
+      '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  },
+  'Looker Studio': {
+    color: '#4285F4',
+    fill: 'stroke',
+    paths: '<path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-5"/>',
+  },
+};
 ---
 
 <section class="mb-12">
   <SectionLabel id="tools" text={t.tools.title} />
   <ul class="flex flex-wrap gap-2">
     {
-      t.tools.items.map((item) => (
-        <li class="inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-white px-3.5 py-1.5 text-sm font-medium text-[var(--color-ink)] shadow-sm transition duration-300 ease-out hover:-translate-y-0.5 hover:border-[var(--color-accent)]">
-          <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
-          {item}
-        </li>
-      ))
+      t.tools.items.map((item) => {
+        const icon = icons[item];
+        return (
+          <li class="inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-white px-3.5 py-1.5 text-sm font-medium text-[var(--color-ink)] shadow-sm transition duration-300 ease-out hover:-translate-y-0.5 hover:border-[var(--color-accent)]">
+            {icon ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox={icon.viewBox ?? '0 0 24 24'}
+                fill={icon.fill === 'stroke' ? 'none' : icon.color}
+                stroke={icon.fill === 'stroke' ? icon.color : 'none'}
+                stroke-width={icon.fill === 'stroke' ? 2 : undefined}
+                stroke-linecap={icon.fill === 'stroke' ? 'round' : undefined}
+                stroke-linejoin={icon.fill === 'stroke' ? 'round' : undefined}
+                aria-hidden="true"
+                set:html={icon.paths}
+              />
+            ) : (
+              <span class="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
+            )}
+            {item}
+          </li>
+        );
+      })
     }
   </ul>
 </section>
