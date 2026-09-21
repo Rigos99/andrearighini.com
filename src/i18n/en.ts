@@ -37,7 +37,7 @@ export const en = {
   about: {
     title: 'About',
     items: [
-      { icon: '📍', text: 'Currently in Rimini' },
+      { icon: '📍', text: 'Based in Rimini, but often out and about for new projects' },
       { icon: '🎓', text: "Master's in Management Economics in Bologna" },
       { icon: '🌍', text: 'Six months of Erasmus in Spain' },
       { icon: '💼', text: 'Freelance since 2024 for Italian SaaS and SMBs' },

@@ -37,7 +37,7 @@ export const it = {
   about: {
     title: 'Chi sono',
     items: [
-      { icon: '📍', text: 'Attualmente a Rimini' },
+      { icon: '📍', text: 'Di base a Rimini, ma spesso in giro per nuovi progetti' },
       { icon: '🎓', text: 'Laurea magistrale in Economia manageriale a Bologna' },
       { icon: '🌍', text: '6 mesi di Erasmus in Spagna' },
       { icon: '💼', text: 'Freelance dal 2024 per SaaS e PMI italiane' },
