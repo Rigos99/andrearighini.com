@@ -52,7 +52,7 @@ export const en = {
         slug: 'freelance',
         org: 'Freelance',
         role: 'Growth Marketing',
-        period: 'Nov 24 - Now',
+        period: 'Oct 24 - Now',
         description: '',
       },
       {
