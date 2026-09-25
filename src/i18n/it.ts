@@ -75,7 +75,7 @@ export const it = {
         slug: 'scs',
         org: 'SCS Consulting',
         role: 'Business Analyst',
-        period: 'Ago 23 - Mar 24',
+        period: 'Set 23 - Mar 24',
         description:
           'Gestito attività di PM su Asana, analizzato il CRM di un top brand retail, fatto ricerca sui canali CRM (app/web) per un leader di mobili outdoor, e supportato un\'operazione di M&A con processi standardizzati e flussi "to-be".',
       },
@@ -88,7 +88,7 @@ export const it = {
         slug: 'unibo-master',
         org: 'Università di Bologna',
         role: 'Management Master Degree (110/110)',
-        period: 'Set 21 - Lug 24',
+        period: 'Set 21 - Lug 23',
       },
       {
         slug: 'ucam',

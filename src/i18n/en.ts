@@ -75,7 +75,7 @@ export const en = {
         slug: 'scs',
         org: 'SCS Consulting',
         role: 'Business Analyst',
-        period: 'Aug 23 - Mar 24',
+        period: 'Sep 23 - Mar 24',
         description:
           'Oversaw PM tasks in Asana, analyzed CRM for top retail brand, researched CRM channels (apps/web) for outdoor furniture leader, and supported M&A with standardized processes and "to-be" flows.',
       },
@@ -88,7 +88,7 @@ export const en = {
         slug: 'unibo-master',
         org: 'University of Bologna',
         role: 'Management Master Degree (110/110)',
-        period: 'Sept 21 - July 24',
+        period: 'Sept 21 - July 23',
       },
       {
         slug: 'ucam',
